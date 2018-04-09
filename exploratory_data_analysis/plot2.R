@@ -1,3 +1,6 @@
+hpc_set$Sub_metering_1 <- as.numeric(hpc_set$Sub_metering_1)
+hpc_set$Sub_metering_2 <- as.numeric(hpc_set$Sub_metering_2)
+hpc_set$Sub_metering_3 <- as.numeric(hpc_set$Sub_metering_3)
 png(file = "plot2.png")
 with(hpc_set, plot(DateTime, Global_active_power, ylab = "Global Active Power (kilowatts)", xlab = "", type = "l"))
 dev.off()
