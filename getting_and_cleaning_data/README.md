@@ -34,3 +34,4 @@ The script run_analysis.R is used to create the data set. This retrieves the sou
 - Create an independent tidy set with the average of each variable for each activity and subject.
 - Write the data set to tidyData.txt file.
 
+- Note: The script requires the use of dplyr package
