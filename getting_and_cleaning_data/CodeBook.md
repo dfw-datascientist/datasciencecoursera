@@ -76,7 +76,7 @@ Transformations:
 ---------------
 - The data has been transformed in the below ways:
 - The training and test sets were merged to create one data set.
-- Only measurements containing mean and std were collected.
+- Only measurements containing mean and std-dev were collected.
 - Activity identifiers replaced with descriptive names.
 - Incoherent variable names and special characters have been dealt with as below:
 - Special characters (, and -) were removed
