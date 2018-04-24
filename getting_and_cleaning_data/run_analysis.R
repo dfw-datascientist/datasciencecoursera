@@ -1,3 +1,5 @@
+install.packages("dplyr")
+library(dplyr)
 zipfile <- tempfile()
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", zipfile)
 unzip(zipfile)
@@ -74,6 +76,7 @@ tidyDataDF <- aggregate(NoActivityTypeDF[,names(NoActivityTypeDF) != c('activity
 
 # Merging tidyDataDF with activityType to include descriptive activity names
 tidyDataDF <- merge(tidyDataDF, activityTypeDF, by='activityId', all.x=TRUE)
+tidyDataDF <- tidyDataDF %>% arrange(activityId, subjectId)
 
 # Exporting tidyDataDF
-write.table(tidyDataDF, './tidyData.txt',row.names=TRUE,sep='\t')
+write.table(tidyDataDF, './tidyData.txt',row.names=TRUE)
