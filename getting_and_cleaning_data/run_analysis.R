@@ -77,4 +77,4 @@ tidyDataDF <- merge(tidyDataDF, activityTypeDF, by='activityId', all.x=TRUE)
 tidyDataDF <- tidyDataDF %>% arrange(activityId, subjectId)
 
 # Exporting tidyDataDF
-write.table(tidyDataDF, './tidyData.txt',row.names=TRUE)
+write.table(tidyDataDF, './tidyData.txt',row.names=FALSE)
